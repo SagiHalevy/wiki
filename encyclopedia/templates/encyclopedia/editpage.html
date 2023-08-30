@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+    <label for="{{ form.markdown_content.id_for_label }}">Entry Content:</label>
+    <br>
+    {{ form.markdown_content }}    
+    <br>
+    <input type="submit" value="Update Entry">
+</form>
+
+{% endblock %}
